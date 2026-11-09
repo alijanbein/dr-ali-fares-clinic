@@ -1,7 +1,9 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { CalendarDays, Globe, ListOrdered, LogOut, Plus, Search, Users } from 'lucide-react';
+import { CalendarDays, Globe, ListOrdered, LogOut, Search, Stethoscope, Users } from 'lucide-react';
 import { useAuth } from '../auth';
 import { Avatar } from './ui';
+
+export const CLINIC_NAME = import.meta.env.VITE_CLINIC_NAME || 'Dr. Ali Fares Clinic';
 
 const NAV = {
   secretary: [
@@ -21,9 +23,9 @@ export default function Layout() {
     <div className="app">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark"><Plus size={20} color="#fff" strokeWidth={3} /></div>
+          <div className="brand-mark"><Stethoscope size={19} color="#fff" strokeWidth={2.4} /></div>
           <div>
-            <div className="brand-title">Clinic</div>
+            <div className="brand-title">{CLINIC_NAME}</div>
             <div className="brand-sub">{user.role} portal</div>
           </div>
         </div>
@@ -40,7 +42,7 @@ export default function Layout() {
             <div>{user.name}</div>
             <div>{user.role}</div>
           </div>
-          <button className="btn btn-ghost btn-icon" style={{ color: 'var(--sidebar-text)' }} onClick={logout} title="Sign out">
+          <button className="btn btn-ghost btn-icon" style={{ color: 'var(--muted)' }} onClick={logout} title="Sign out">
             <LogOut size={18} />
           </button>
         </div>

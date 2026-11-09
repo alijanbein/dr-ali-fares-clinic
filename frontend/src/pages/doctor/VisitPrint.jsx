@@ -6,7 +6,7 @@ import VisitSummary from '../../components/VisitSummary';
 import { Loading } from '../../components/ui';
 import { formatDate, patientName } from '../../utils/format';
 
-const CLINIC_NAME = import.meta.env.VITE_CLINIC_NAME || 'Orthopedic Clinic';
+import { CLINIC_NAME } from '../../components/Layout';
 
 export default function VisitPrint() {
   const { id } = useParams();
@@ -58,7 +58,7 @@ export default function VisitPrint() {
         <div className="grid-3 mb" style={{ fontSize: 13 }}>
           <div><span className="muted">Patient</span><div className="strong">{patientName(patient)}</div></div>
           <div><span className="muted">File</span><div className="strong">{patient.fileNumber}</div></div>
-          <div><span className="muted">Age / gender</span><div className="strong">{[patient.age, patient.gender].filter((x) => x != null && x !== '').join(' · ') || '—'}</div></div>
+          <div><span className="muted">Age / gender</span><div className="strong">{[patient.age, patient.gender].filter((x) => x != null && x !== '').join(' Â· ') || 'â€”'}</div></div>
           {patient.allergies && <div className="span-3" style={{ color: 'var(--danger)' }}><b>Allergies:</b> {patient.allergies}</div>}
         </div>
 
@@ -74,7 +74,7 @@ export default function VisitPrint() {
 
         <div style={{ marginTop: 48, display: 'flex', justifyContent: 'flex-end' }}>
           <div style={{ borderTop: '1px solid var(--border-dark)', paddingTop: 6, width: 220, textAlign: 'center' }} className="small muted">
-            Signature · {visit.doctor}
+            Signature Â· {visit.doctor}
           </div>
         </div>
       </div>

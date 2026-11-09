@@ -22,7 +22,7 @@ export default function PatientCard({ patient, onClose }) {
     w.document.write(`<!doctype html><html><head><title>Patient card</title><style>
       body{font-family:Inter,Arial,sans-serif;margin:24px}
       .c{width:86mm;height:54mm;border:1px solid #999;border-radius:10px;padding:12px;display:flex;gap:12px;align-items:center;box-sizing:border-box}
-      .k{font-size:9px;font-weight:700;color:#0369a1;letter-spacing:.08em;text-transform:uppercase}
+      .k{font-size:9px;font-weight:700;color:#2d6a5a;letter-spacing:.08em;text-transform:uppercase}
       .n{font-size:15px;font-weight:800;margin:4px 0}.f{font-family:monospace;font-size:14px;font-weight:700}
       .s{font-size:10px;color:#555;margin-top:6px}img{width:30mm;height:30mm}
     </style></head><body><div class="c"><img src="${dataUrl}"/><div>
@@ -48,7 +48,7 @@ export default function PatientCard({ patient, onClose }) {
           </div>
         </div>
         <div className="muted small" style={{ textAlign: 'center' }}>
-          The doctor scans this code to open the patient’s file.
+          The doctor scans this code to open the patientâ€™s file.
         </div>
       </div>
     </Modal>
