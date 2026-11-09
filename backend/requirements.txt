@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+python-multipart
+pyjwt
+bcrypt
+openai
+pydub
+audioop-lts; python_version >= "3.13"

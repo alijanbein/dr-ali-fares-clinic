@@ -1,0 +1,26 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# node
+node_modules/
+dist/
+
+# patient data stored on disk
+backend/audio/
+backend/documents/
+*.db
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
